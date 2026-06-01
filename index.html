@@ -1350,9 +1350,66 @@
       </div>
    </div>
    <script>
+  (function () {
+    function initHeroTyping() {
+      const typingText = document.querySelector('.hero-title .typing');
+      if (!typingText) return;
+
+      const typingLines = [
+        typingText.dataset.text || typingText.textContent.trim().replace(/\s+/g, ' '),
+        'Building Premium Websites and Software',
+        'Creating AI Powered Digital Experiences',
+        'Scaling Brands With Smart Technology'
+      ];
+      typingText.textContent = '';
+
+      let index = 0;
+      let lineIndex = 0;
+      let deleting = false;
+
+      function tick() {
+        const fullText = typingLines[lineIndex];
+        typingText.textContent = fullText.slice(0, index);
+
+        if (!deleting && index < fullText.length) {
+          index += 1;
+          window.setTimeout(tick, 95);
+          return;
+        }
+
+        if (!deleting) {
+          deleting = true;
+          window.setTimeout(tick, 1900);
+          return;
+        }
+
+        if (index > 0) {
+          index -= 1;
+          window.setTimeout(tick, 42);
+          return;
+        }
+
+        deleting = false;
+        lineIndex = (lineIndex + 1) % typingLines.length;
+        window.setTimeout(tick, 600);
+      }
+
+      tick();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initHeroTyping);
+    } else {
+      initHeroTyping();
+    }
+  })();
+</script>
+
+   <script>
   document.addEventListener("DOMContentLoaded", function () {
 
     const tabButtons = document.querySelectorAll('.tech-tabs .nav-link');
+    if (!tabButtons.length) return;
     let currentTab = 0;
 
     function showNextTab() {

@@ -28125,6 +28125,7 @@ a.cursor-hide img {
 
 .hero-title {
   max-width: 760px;
+  min-height: 2.3em;
   font-size: 31px;
   font-weight: 700;
   line-height: 1.14;
@@ -28289,13 +28290,15 @@ a.cursor-hide img {
 
 /* Typing Effect */
 .typing {
-  display: inline-block;
+  display: inline;
   max-width: 100%;
   white-space: normal;
-  overflow: visible;
-  border-right: 0;
-  width: auto;
-  animation: none;
+  border-right: 3px solid rgba(255, 255, 255, 0.9);
+  animation: heroTypingCursor 0.8s step-end infinite;
+}
+
+@keyframes heroTypingCursor {
+  50% { border-color: transparent; }
 }
 
 /* Typing animation */
@@ -28330,12 +28333,9 @@ a.cursor-hide img {
   }
 
   .typing {
-    width: auto;
-    max-width: 100%;
     white-space: normal;
-    overflow: visible;
-    border-right: 0;
-    animation: none;
+    border-right: 3px solid rgba(255, 255, 255, 0.9);
+    animation: heroTypingCursor 0.8s step-end infinite;
   }
 
   .hero-section .hero-subtitle {
