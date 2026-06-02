@@ -13298,7 +13298,7 @@ body.tp-magic-cursor #magic-cursor {
 }
 @media only screen and (min-width: 576px) and (max-width: 767px), (max-width: 574.98px) {
   .tp-service-vp-wrap .row [class*=col]:not(:first-child) .tp-service-vp-item {
-    padding-top: 20px;
+    padding-top: 36px;
   }
 }
 
@@ -28692,9 +28692,59 @@ a.cursor-hide img {
   }
 }
 
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: auto;
+    background:
+      radial-gradient(circle at 14% 10%, rgba(22, 140, 255, 0.15), transparent 28%),
+      radial-gradient(circle at 88% 18%, rgba(116, 64, 255, 0.12), transparent 26%),
+      linear-gradient(180deg, #f6faff 0%, #ffffff 58%, #f8fbff 100%) !important;
+  }
+
+  .hero-video,
+  .hero-overlay {
+    height: min(620px, 78svh);
+    bottom: auto;
+  }
+
+  .hero-section .row.min-vh-100 {
+    --bs-gutter-y: 0;
+    min-height: auto !important;
+    align-content: flex-start;
+    gap: 0;
+    padding: 0;
+  }
+
+  .hero-section .col-lg-8 {
+    min-height: min(620px, 78svh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 112px;
+    padding-bottom: 48px;
+  }
+
+  .hero-section .col-lg-4 {
+    width: 100%;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 34px;
+  }
+
+  .hero-quote-card {
+    width: min(100%, 430px);
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 575px) {
   .hero-section .min-vh-100 {
-    padding: 120px 0 64px;
+    padding: 0 0 22px;
+  }
+
+  .hero-section .col-lg-8 {
+    padding-top: 110px;
+    padding-bottom: 42px;
   }
 
   .hero-title {
@@ -28725,6 +28775,7 @@ a.cursor-hide img {
   }
 
   .hero-quote-card {
+    width: min(100%, 380px);
     padding: 22px;
     border-radius: 16px;
   }
