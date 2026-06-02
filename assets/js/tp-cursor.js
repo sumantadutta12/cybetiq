@@ -2,6 +2,13 @@
     "use strict";
 
     if ($("body").not(".is-mobile").hasClass("tp-magic-cursor")) {
+        var $cursor = $("#magic-cursor");
+        var $ball = $("#ball");
+
+        if (!$cursor.length || !$ball.length) {
+            return;
+        }
+
         $(".tp-magnetic-item").wrap('<div class="tp-magnetic-wrap"></div>');
 
         if ($("a.tp-magnetic-item").length) {
@@ -12,8 +19,6 @@
         var $pos = { x: 0, y: 0 };
         var $ratio = 0.15;
         var $active = false;
-        var $ball = $("#ball");
-
         var $ballWidth = 14;
         var $ballHeight = 14;
         var $ballScale = 1;
@@ -142,11 +147,11 @@
 
         // Document enter/leave
         $(document).on("mouseleave", function() {
-            gsap.to("#magic-cursor", { duration: 0.3, autoAlpha: 0 });
+            gsap.to($cursor, { duration: 0.3, autoAlpha: 0 });
         }).on("mouseenter", function() {
-            gsap.to("#magic-cursor", { duration: 0.3, autoAlpha: 1 });
+            gsap.to($cursor, { duration: 0.3, autoAlpha: 1 });
         }).on("mousemove", function() {
-            gsap.to("#magic-cursor", { duration: 0.3, autoAlpha: 1 });
+            gsap.to($cursor, { duration: 0.3, autoAlpha: 1 });
         });
     }
 
