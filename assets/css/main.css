@@ -32628,10 +32628,17 @@ body.loaded .tp-techonolgy-area {
   color: #26364a;
   font-size: 15px;
   line-height: 1.2;
+  display: inline-block;
+  background-image: linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor);
+  background-size: 0 1px, 0 1px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s linear, color 0.3s ease;
 }
 
 .premium-footer-connect ul li a:hover {
   color: #1287eb;
+  background-size: 0 1px, 100% 1px;
 }
 
 .premium-footer-connect .tp-input {
