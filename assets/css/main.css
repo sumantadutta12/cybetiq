@@ -33364,7 +33364,8 @@ color: #fff;
 .ai-stack-chip:hover::after {
   opacity: 1;
 }
-.ai-stack-chip i {
+.ai-stack-chip i,
+.ai-stack-chip .ai-stack-icon {
   position: relative;
   z-index: 1;
   display: inline-grid;
@@ -33377,6 +33378,14 @@ color: #fff;
   background: color-mix(in srgb, var(--stack-color) 12%, #fff);
   font-size: 24px;
 }
+.ai-stack-chip .ai-stack-icon {
+  padding: 9px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
 .ai-stack-chip span {
   position: relative;
   z-index: 1;
@@ -33386,6 +33395,7 @@ color: #fff;
 .color-python { --stack-color: #3776ab; }
 .color-tensor { --stack-color: #ff8f00; }
 .color-pytorch { --stack-color: #ee4c2c; }
+.color-polygon { --stack-color: #8247e5; }
 .color-openai { --stack-color: #10a37f; }
 .color-lang { --stack-color: #6f5cff; }
 .color-vector { --stack-color: #00b8d9; }
