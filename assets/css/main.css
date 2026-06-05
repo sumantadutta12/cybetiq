@@ -41002,7 +41002,7 @@ small,
 .articles-premium-hero,
 .ai-trends-hero,
 .news-premium-hero,
-.case-study-premium-page .insight-hero {
+.insight-hero {
   background:
     radial-gradient(circle at 12% 18%, rgba(22, 140, 255, 0.20), transparent 30%),
     radial-gradient(circle at 88% 12%, rgba(169, 44, 255, 0.16), transparent 32%),
@@ -41015,7 +41015,7 @@ small,
 .articles-premium-hero::before,
 .ai-trends-hero::before,
 .news-premium-hero::before,
-.case-study-premium-page .insight-hero::before {
+.insight-hero::before {
   background:
     linear-gradient(rgba(18, 135, 235, 0.055) 1px, transparent 1px),
     linear-gradient(90deg, rgba(18, 135, 235, 0.055) 1px, transparent 1px) !important;
@@ -41044,7 +41044,7 @@ small,
 .articles-premium-hero p,
 .ai-trends-hero p,
 .news-premium-hero p,
-.case-study-premium-page .insight-hero p,
+.insight-hero p,
 .insight-hero-panel p {
   color: rgba(7, 17, 31, 0.70) !important;
 }
@@ -41059,7 +41059,7 @@ small,
 .articles-premium-hero h1,
 .ai-trends-hero h1,
 .news-premium-hero h1,
-.case-study-premium-page .insight-hero h1,
+.insight-hero h1,
 .insight-hero-panel strong {
   color: #07111f !important;
 }
