@@ -2113,6 +2113,42 @@
 		});
 	});
 
+	////////////////////////////////////////////////////
+	// 66. Cookie consent banner
+	const cookieConsent = document.querySelector('.cybetiq-cookie-consent');
+	if (cookieConsent) {
+		const consentKey = 'cybetiqCookieConsent';
+		const consentButtons = cookieConsent.querySelectorAll('[data-cookie-consent]');
+		const storage = {
+			get() {
+				try {
+					return localStorage.getItem(consentKey);
+				} catch (error) {
+					return null;
+				}
+			},
+			set() {
+				try {
+					localStorage.setItem(consentKey, 'true');
+				} catch (error) {
+					return false;
+				}
+				return true;
+			}
+		};
+
+		if (storage.get() !== 'true') {
+			cookieConsent.classList.add('is-visible');
+		}
+
+		consentButtons.forEach(button => {
+			button.addEventListener('click', function () {
+				storage.set();
+				cookieConsent.classList.remove('is-visible');
+			});
+		});
+	}
+
 
 
 

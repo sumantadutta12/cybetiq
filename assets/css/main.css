@@ -32609,6 +32609,31 @@ body.loaded .tp-techonolgy-area {
   background: #24e4a8;
 }
 
+.premium-footer-connect ul {
+  margin: 0;
+  padding: 0;
+}
+
+.premium-footer-connect ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.premium-footer-connect ul li:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.premium-footer-connect ul li a {
+  color: #26364a;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.premium-footer-connect ul li a:hover {
+  color: #1287eb;
+}
+
 .premium-footer-connect .tp-input {
   height: 52px;
   border: 1px solid rgba(7, 17, 31, 0.16);
@@ -32665,26 +32690,27 @@ body.loaded .tp-techonolgy-area {
 
 .premium-footer-bottom-inner {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   gap: 24px;
-  padding: 30px 0 36px;
-  text-align: center;
+  padding: 0px 0 0px;
+  text-align: left;
 }
 
 .premium-footer-bottom-social {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 22px;
+  gap: 5px;
 }
 
 .premium-footer-bottom-social a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 40px;
+  height: 40px;
   border: 1px solid rgba(7, 17, 31, 0.42);
   border-radius: 50%;
   color: #07111f;
@@ -32718,19 +32744,86 @@ body.loaded .tp-techonolgy-area {
   width: 22px;
 }
 
-.premium-footer-cookie {
-  color: #647083 !important;
-  font-size: 15px;
-  line-height: 1.5;
-}
-
-.premium-footer-cookie a {
-  color: #2868ff !important;
-}
-
-.premium-footer-bottom p a:hover,
-.premium-footer-cookie a:hover {
+.premium-footer-bottom p a:hover {
   color: #1287eb !important;
+}
+
+.cybetiq-cookie-consent {
+  position: fixed;
+  left: 50%;
+  right: auto;
+  bottom: 20px;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: calc(100% - 240px);
+  max-width: 1120px;
+  padding: 18px 22px;
+  border: 1px solid rgba(7, 17, 31, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 50px rgba(7, 17, 31, 0.16);
+  backdrop-filter: blur(14px);
+  transform: translateX(-50%);
+}
+
+.cybetiq-cookie-consent.is-visible {
+  display: flex;
+}
+
+.cybetiq-cookie-copy {
+  max-width: 980px;
+  margin: 0;
+  color: #1d2a3a;
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 500;
+}
+
+.cybetiq-cookie-copy a {
+  color: #07111f;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cybetiq-cookie-actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 14px;
+}
+
+.cybetiq-cookie-btn {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(7, 17, 31, 0.18);
+  border-radius: 4px;
+  color: #07111f;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.cybetiq-cookie-btn:hover {
+  border-color: #07111f;
+  transform: translateY(-1px);
+}
+
+.cybetiq-cookie-btn-primary {
+  color: #fff;
+  border-color: #07111f;
+  background: #07111f;
+}
+
+.cybetiq-cookie-btn-primary:hover {
+  color: #fff;
+  background: #1287eb;
+  border-color: #1287eb;
 }
 
 @media (max-width: 991px) {
@@ -32738,12 +32831,20 @@ body.loaded .tp-techonolgy-area {
     grid-template-columns: 1fr;
     padding: 30px;
   }
+
+  .cybetiq-cookie-consent {
+    width: calc(100% - 48px);
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 767px) {
   .premium-footer-bottom-inner {
+    flex-direction: column;
     gap: 18px;
     padding: 26px 0 30px;
+    text-align: center;
   }
 
   .premium-footer-bottom-social {
@@ -32763,6 +32864,31 @@ body.loaded .tp-techonolgy-area {
 
   .premium-footer-legal span {
     display: none;
+  }
+
+  .cybetiq-cookie-consent {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    width: auto;
+    gap: 16px;
+    padding: 16px;
+    transform: none;
+  }
+
+  .cybetiq-cookie-copy {
+    font-size: 13px;
+  }
+
+  .cybetiq-cookie-actions {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .cybetiq-cookie-btn {
+    width: 100%;
   }
 }
 
@@ -40762,15 +40888,16 @@ small,
 /* Unified service page theme matching Website Development */
 .ai-hero {
   background:
-    radial-gradient(circle at 12% 18%, rgba(22, 140, 255, 0.28), transparent 30%),
-    radial-gradient(circle at 88% 12%, rgba(169, 44, 255, 0.22), transparent 32%),
-    linear-gradient(135deg, #040711 0%, #0b1020 54%, #05070d 100%) !important;
+    radial-gradient(circle at 12% 18%, rgba(22, 140, 255, 0.20), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(169, 44, 255, 0.16), transparent 32%),
+    radial-gradient(circle at 78% 76%, rgba(249, 115, 22, 0.12), transparent 28%),
+    linear-gradient(135deg, #eef7ff 0%, #f7f1ff 52%, #fff7ed 100%) !important;
 }
 
 .ai-hero::before {
   background:
-    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px) !important;
+    linear-gradient(rgba(18, 135, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 135, 235, 0.055) 1px, transparent 1px) !important;
   background-size: 72px 72px !important;
   opacity: 1 !important;
 }
@@ -40784,22 +40911,162 @@ small,
 }
 
 .ai-breadcrumb {
-  color: rgba(255, 255, 255, 0.72) !important;
+  color: rgba(7, 17, 31, 0.70) !important;
+  border-color: rgba(7, 17, 31, 0.12) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.90), 0 18px 45px rgba(18, 135, 235, 0.12) !important;
+}
+
+.ai-breadcrumb a,
+.ai-breadcrumb span {
+  color: rgba(7, 17, 31, 0.68) !important;
+}
+
+.ai-breadcrumb a:hover {
+  color: #1287eb !important;
 }
 
 .ai-breadcrumb strong,
 .ai-title {
-  color: #ffffff !important;
+  color: #07111f !important;
 }
 
 .ai-desc {
-  color: rgba(255, 255, 255, 0.74) !important;
+  color: rgba(7, 17, 31, 0.70) !important;
 }
 
 .ai-service-section {
   background:
     radial-gradient(circle at 88% 12%, rgba(116, 64, 255, 0.10), transparent 30%),
     linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%) !important;
+}
+
+/* Company dropdown hero light theme */
+.portfolio-page .work-page-hero,
+.career-hero {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(22, 140, 255, 0.20), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(169, 44, 255, 0.16), transparent 32%),
+    radial-gradient(circle at 78% 76%, rgba(249, 115, 22, 0.12), transparent 28%),
+    linear-gradient(135deg, #eef7ff 0%, #f7f1ff 52%, #fff7ed 100%) !important;
+  color: #07111f !important;
+}
+
+.portfolio-page .work-page-hero::before,
+.career-hero::before {
+  background:
+    linear-gradient(rgba(18, 135, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 135, 235, 0.055) 1px, transparent 1px) !important;
+  background-size: 72px 72px !important;
+  opacity: 1 !important;
+}
+
+.portfolio-page .work-page-hero::after {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.70), rgba(255, 255, 255, 0.26)),
+    radial-gradient(circle at 30% 28%, rgba(36, 228, 168, 0.18), transparent 30%),
+    radial-gradient(circle at 72% 70%, rgba(18, 135, 235, 0.20), transparent 34%) !important;
+  border-color: rgba(7, 17, 31, 0.10) !important;
+  box-shadow: 0 40px 110px rgba(18, 135, 235, 0.14) !important;
+}
+
+.portfolio-page .work-breadcrumb,
+.career-hero span {
+  border-color: rgba(7, 17, 31, 0.12) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.90), 0 18px 45px rgba(18, 135, 235, 0.12) !important;
+}
+
+.portfolio-page .work-breadcrumb a,
+.portfolio-page .work-breadcrumb span,
+.portfolio-page .work-breadcrumb i {
+  color: rgba(7, 17, 31, 0.68) !important;
+}
+
+.portfolio-page .work-breadcrumb a:hover {
+  color: #1287eb !important;
+}
+
+.portfolio-page .work-page-hero h1,
+.career-hero h1 {
+  color: #07111f !important;
+}
+
+.portfolio-page .work-page-hero p,
+.career-hero p {
+  color: rgba(7, 17, 31, 0.70) !important;
+}
+
+/* Contact and Insights dropdown hero light theme */
+.contact-hero,
+.articles-premium-hero,
+.ai-trends-hero,
+.news-premium-hero,
+.case-study-premium-page .insight-hero {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(22, 140, 255, 0.20), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgba(169, 44, 255, 0.16), transparent 32%),
+    radial-gradient(circle at 78% 76%, rgba(249, 115, 22, 0.12), transparent 28%),
+    linear-gradient(135deg, #eef7ff 0%, #f7f1ff 52%, #fff7ed 100%) !important;
+  color: #07111f !important;
+}
+
+.contact-hero::before,
+.articles-premium-hero::before,
+.ai-trends-hero::before,
+.news-premium-hero::before,
+.case-study-premium-page .insight-hero::before {
+  background:
+    linear-gradient(rgba(18, 135, 235, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 135, 235, 0.055) 1px, transparent 1px) !important;
+  background-size: 72px 72px !important;
+  opacity: 1 !important;
+}
+
+.contact-hero::after {
+  border-color: rgba(7, 17, 31, 0.10) !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+}
+
+.contact-breadcrumb,
+.articles-hero-actions a:last-child,
+.news-hero-actions a:last-child,
+.insight-hero-panel {
+  border-color: rgba(7, 17, 31, 0.12) !important;
+  background: rgba(255, 255, 255, 0.72) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.90), 0 18px 45px rgba(18, 135, 235, 0.12) !important;
+}
+
+.contact-breadcrumb a,
+.contact-breadcrumb span,
+.contact-small,
+.contact-hero-text,
+.articles-premium-hero p,
+.ai-trends-hero p,
+.news-premium-hero p,
+.case-study-premium-page .insight-hero p,
+.insight-hero-panel p {
+  color: rgba(7, 17, 31, 0.70) !important;
+}
+
+.contact-breadcrumb a:hover,
+.articles-hero-actions a:last-child:hover,
+.news-hero-actions a:last-child:hover {
+  color: #1287eb !important;
+}
+
+.contact-title,
+.articles-premium-hero h1,
+.ai-trends-hero h1,
+.news-premium-hero h1,
+.case-study-premium-page .insight-hero h1,
+.insight-hero-panel strong {
+  color: #07111f !important;
+}
+
+.articles-hero-actions a:last-child,
+.news-hero-actions a:last-child {
+  color: #07111f !important;
 }
 
 .ai-service-section .row {
