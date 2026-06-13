@@ -18,6 +18,13 @@
    <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
+   <style>
+      .articles-post-meta{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+      .articles-post-meta .meta-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#8b5cf6 0%,#06b6d4 100%);color:#fff;font-size:20px}
+      .articles-post-meta small{font-size:13px;color:#7b8794}
+      .articles-post-card.is-large .articles-post-image img{border-radius:12px}
+      .articles-post-card a{display:inline-flex;align-items:center;gap:8px}
+   </style>
 </head>
 
 <body class="tp-magic-cursor loaded">
@@ -344,19 +351,19 @@
                         <figure class="articles-post-image">
                            <img src="assets/img/service/web-devlopment.jpg" alt="Web stack planning and development interface">
                         </figure>
-                        <div class="articles-post-meta"><span>01</span><small>Architecture</small></div>
+                        <div class="articles-post-meta"><span class="meta-icon" aria-hidden="true"><i class="fa-light fa-layer-group"></i></span><small>Architecture</small></div>
                         <h3>Choosing the right web stack</h3>
                         <p>How to evaluate frameworks, backend choices, CMS needs, and long-term maintainability before starting a project.</p>
                         <a href="contact-us.html">Plan this topic <i class="fa-light fa-arrow-right"></i></a>
                      </article>
                      <article class="articles-post-card ">
-                        <div class="articles-post-meta"><span>02</span><small>Scalability</small></div>
+                        <div class="articles-post-meta"><span class="meta-icon" aria-hidden="true"><i class="fa-light fa-gauge-high"></i></span><small>Scalability</small></div>
                         <h3>What makes a website scalable</h3>
                         <p>A practical look at architecture, deployment, performance, content structure, and analytics readiness.</p>
                         <a href="contact-us.html">Plan this topic <i class="fa-light fa-arrow-right"></i></a>
                      </article>
                      <article class="articles-post-card ">
-                        <div class="articles-post-meta"><span>03</span><small>Maintainability</small></div>
+                        <div class="articles-post-meta"><span class="meta-icon" aria-hidden="true"><i class="fa-light fa-code-merge"></i></span><small>Maintainability</small></div>
                         <h3>Reducing technical debt</h3>
                         <p>How structured delivery, reviews, and clean module boundaries keep products easier to improve.</p>
                         <a href="contact-us.html">Plan this topic <i class="fa-light fa-arrow-right"></i></a>
@@ -378,28 +385,28 @@
                   </div>
                   <div class="articles-playbook-list">
                      <div class="articles-playbook-item">
-                        <span>01</span>
+                        <span class="playbook-icon" aria-hidden="true"><i class="fa-light fa-sitemap"></i></span>
                         <div>
                            <h3>Architecture Review</h3>
                            <p>Audit platform structure, integration points, hosting, and release workflow before a rebuild.</p>
                         </div>
                      </div>
                      <div class="articles-playbook-item">
-                        <span>02</span>
+                        <span class="playbook-icon" aria-hidden="true"><i class="fa-light fa-gauge-high"></i></span>
                         <div>
                            <h3>Performance Planning</h3>
                            <p>Prioritize Core Web Vitals, caching, image strategy, JavaScript budgets, and backend response times.</p>
                         </div>
                      </div>
                      <div class="articles-playbook-item">
-                        <span>03</span>
+                        <span class="playbook-icon" aria-hidden="true"><i class="fa-light fa-shield-check"></i></span>
                         <div>
                            <h3>Security Basics</h3>
                            <p>Review forms, authentication, roles, data validation, backups, and dependency hygiene.</p>
                         </div>
                      </div>
                      <div class="articles-playbook-item">
-                        <span>04</span>
+                        <span class="playbook-icon" aria-hidden="true"><i class="fa-light fa-layer-group"></i></span>
                         <div>
                            <h3>Product Maintainability</h3>
                            <p>Create reusable components, documentation, and sensible naming so future changes are cheaper.</p>
