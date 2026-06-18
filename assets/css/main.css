@@ -41488,8 +41488,7 @@ small,
 /* Unified service page theme matching Website Development */
 .ai-hero {
   background:
-    linear-gradient(90deg, rgba(245, 249, 255, 0.94) 0%, rgba(245, 249, 255, 0.82) 42%, rgba(245, 249, 255, 0.58) 100%),
-    url("../img/body/bg-1.png") center / cover no-repeat !important;
+   linear-gradient(90deg, rgb(245 249 255 / 52%) 0%, rgb(245 249 255 / 42%) 42%, rgba(245, 249, 255, 0.58) 100%), url(../img/body/bg-1.png) center / cover no-repeat !important
 }
 
 .ai-hero::before {
@@ -43520,7 +43519,7 @@ span.meta-icon i {
     font-size: clamp(22px, 1.35vw, 26px) !important;
     line-height: 1.14 !important;
     font-weight: 500 !important;
-    letter-spacing: -0.02em !important;
+    letter-spacing: 0 !important;
 }
 
 .ai-premium-usecases .ai-premium-card p {
@@ -43973,5 +43972,408 @@ span.meta-icon i {
   .video-case-page .insight-featured .insight-card .insight-badge,
   .video-case-page .insight-resources .insight-resource-card .insight-badge {
     margin-bottom: 16px !important;
+  }
+}
+
+/* Premium shared service page refresh */
+.ai-service-section {
+  padding: 112px 0 !important;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(18, 140, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 92% 6%, rgba(14, 221, 184, 0.10), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f4f8fd 100%) !important;
+}
+
+.ai-service-section::before {
+  inset: 24px !important;
+  border-color: rgba(40, 104, 255, 0.10) !important;
+  border-radius: 34px !important;
+  background-image:
+    linear-gradient(rgba(40, 104, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(40, 104, 255, 0.045) 1px, transparent 1px) !important;
+  background-size: 72px 72px !important;
+}
+
+.ai-service-section::after {
+  right: -130px !important;
+  bottom: -190px !important;
+  width: 520px !important;
+  height: 520px !important;
+  border-color: rgba(40, 104, 255, 0.12) !important;
+  box-shadow:
+    inset 0 0 0 96px rgba(255, 255, 255, 0.48),
+    0 30px 90px rgba(40, 104, 255, 0.08) !important;
+}
+
+.ai-service-section .row {
+  min-height: 460px !important;
+  padding: clamp(30px, 4vw, 62px) !important;
+  border: 1px solid rgba(40, 104, 255, 0.12) !important;
+  border-radius: 30px !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 255, 0.94)),
+    radial-gradient(circle at 98% 5%, rgba(169, 44, 255, 0.10), transparent 34%),
+    radial-gradient(circle at 0% 100%, rgba(18, 199, 232, 0.10), transparent 32%) !important;
+  box-shadow:
+    0 34px 95px rgba(15, 23, 42, 0.10),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.ai-service-section .row::before {
+  left: clamp(28px, 4vw, 62px) !important;
+  right: clamp(28px, 4vw, 62px) !important;
+  height: 5px !important;
+  background: linear-gradient(90deg, #128cff 0%, #14d3bd 43%, #7a4dff 72%, #a92cff 100%) !important;
+}
+
+.ai-service-section .col-lg-8 {
+  padding-left: clamp(28px, 4vw, 56px) !important;
+}
+
+.ai-service-visual {
+  width: min(100%, 430px) !important;
+  aspect-ratio: 1.08 / 1 !important;
+  border: 1px solid rgba(255, 255, 255, 0.86) !important;
+  border-radius: 26px !important;
+  background:
+    linear-gradient(135deg, rgba(8, 18, 34, 0.92), rgba(18, 48, 78, 0.88)) !important;
+  box-shadow:
+    0 26px 70px rgba(7, 17, 31, 0.18),
+    0 0 0 10px rgba(255, 255, 255, 0.62) !important;
+}
+
+.ai-service-visual::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  z-index: 1;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+}
+
+.ai-service-visual::after {
+  z-index: 2;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(7, 17, 31, 0.18)),
+    linear-gradient(135deg, rgba(18, 140, 255, 0.18), transparent 42%, rgba(169, 44, 255, 0.12)) !important;
+}
+
+.ai-service-visual img {
+  filter: saturate(1.05) contrast(1.03);
+}
+
+.ai-main-title {
+  max-width: 920px !important;
+  margin-bottom: 24px !important;
+  padding-top: 30px !important;
+  font-size: clamp(34px, 3.05vw, 52px) !important;
+  line-height: 1.06 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+.ai-main-title::before {
+  width: 82px !important;
+  height: 4px !important;
+  background: linear-gradient(90deg, #128cff 0%, #14d3bd 100%) !important;
+}
+
+.ai-para {
+  max-width: 900px !important;
+  margin-bottom: 18px !important;
+  color: #5f6d82 !important;
+  font-size: clamp(17px, 1.16vw, 20px) !important;
+  line-height: 1.75 !important;
+}
+
+.ai-premium-usecases,
+.ai-premium-capabilities,
+.ai-premium-stack,
+.ai_contidi {
+  background:
+    radial-gradient(circle at 10% 8%, rgba(18, 140, 255, 0.10), transparent 28%),
+    radial-gradient(circle at 90% 10%, rgba(169, 44, 255, 0.08), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%) !important;
+}
+
+.ai-premium-usecases .ai-premium-card,
+.ai-premium-capability-grid > div,
+.ai-premium-dark-panel,
+.ai_contidi .process-card {
+  border: 1px solid rgba(40, 104, 255, 0.12) !important;
+  border-radius: 22px !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(247, 251, 255, 0.92)),
+    radial-gradient(circle at 92% 8%, rgba(169, 44, 255, 0.11), transparent 34%),
+    radial-gradient(circle at 6% 0%, rgba(18, 199, 232, 0.11), transparent 30%) !important;
+  box-shadow:
+    0 22px 70px rgba(7, 17, 31, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+}
+
+.ai-premium-usecases .ai-premium-card:hover,
+.ai-premium-capability-grid > div:hover,
+.ai_contidi .process-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(40, 104, 255, 0.26) !important;
+  box-shadow:
+    0 34px 90px rgba(18, 135, 235, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.ai-premium-usecases .ai-premium-card > i,
+.ai-premium-capability-grid i,
+.ai_contidi .card-icon {
+  border-radius: 18px !important;
+  background: linear-gradient(135deg, #128cff 0%, #2868ff 36%, #7440ff 70%, #a92cff 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 42px rgba(40, 104, 255, 0.24) !important;
+}
+
+.ai_contidi .card-icon svg {
+  stroke: #ffffff !important;
+}
+
+.ai-premium-usecases .ai-premium-card h3,
+.ai-premium-capability-grid h3,
+.ai_contidi .card-title {
+  color: #07111f !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+.ai-premium-usecases .ai-premium-card p,
+.ai-premium-capability-grid p,
+.ai-premium-dark-panel p,
+.ai_contidi .card-desc {
+  color: #5f6d82 !important;
+}
+
+.ai-premium-stack-list {
+  padding: 18px !important;
+  border: 1px solid rgba(40, 104, 255, 0.10) !important;
+  border-radius: 26px !important;
+  background: rgba(255, 255, 255, 0.76) !important;
+  box-shadow:
+    0 24px 70px rgba(15, 23, 42, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(14px);
+}
+
+.ai-stack-chip {
+  min-height: 66px !important;
+  padding: 11px 14px !important;
+  border-color: rgba(8, 18, 34, 0.07) !important;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.66) !important;
+}
+
+.ai-stack-chip:hover {
+  border-color: color-mix(in srgb, var(--stack-color) 28%, #dce2eb) !important;
+  background: #ffffff !important;
+}
+
+.ai_contidi .process-row {
+  gap: 10px !important;
+  padding: 10px !important;
+  border-color: rgba(40, 104, 255, 0.12) !important;
+  border-radius: 28px !important;
+  background: rgba(255, 255, 255, 0.62) !important;
+}
+
+.ai_contidi .process-card.active {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(238, 246, 255, 0.96)),
+    radial-gradient(circle at 92% 8%, rgba(169, 44, 255, 0.14), transparent 34%) !important;
+}
+
+.ai_contidi .arrow-btn,
+.ai_contidi .process-card:not(.active) .arrow-btn {
+  background: linear-gradient(135deg, #128cff 0%, #2868ff 36%, #7440ff 70%, #a92cff 100%) !important;
+}
+
+.premium-ai-section {
+  padding: 108px 0 !important;
+  background:
+    radial-gradient(circle at 10% 8%, rgba(18, 140, 255, 0.12), transparent 28%),
+    radial-gradient(circle at 88% 12%, rgba(169, 44, 255, 0.10), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f5f9ff 100%) !important;
+}
+
+.premium-ai-section::before {
+  inset: 24px !important;
+  border: 1px solid rgba(40, 104, 255, 0.10) !important;
+  border-radius: 34px !important;
+  background-image:
+    linear-gradient(rgba(40, 104, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(40, 104, 255, 0.04) 1px, transparent 1px) !important;
+  background-size: 72px 72px !important;
+}
+
+.premium-ai-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.premium-ai-section .ai-command-head {
+  max-width: 850px !important;
+  margin: 0 auto 54px !important;
+  text-align: center !important;
+}
+
+.premium-ai-section .ai-command-head span {
+  justify-content: center !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.premium-ai-section .ai-command-head h2 {
+  color: #07111f !important;
+  font-size: clamp(34px, 4vw, 58px) !important;
+  line-height: 1.04 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+}
+
+.premium-ai-section .ai-command-head p {
+  max-width: 700px !important;
+  margin: 18px auto 0 !important;
+  color: #5f6d82 !important;
+  font-size: 18px !important;
+  line-height: 1.72 !important;
+}
+
+.premium-ai-section .ai-command-layout {
+  align-items: stretch !important;
+  gap: 24px !important;
+}
+
+.premium-ai-section .ai-command-visual,
+.premium-ai-section .ai-command-services article,
+.premium-ai-section .ai-command-process div {
+  border: 1px solid rgba(40, 104, 255, 0.12) !important;
+  border-radius: 24px !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(247, 251, 255, 0.92)),
+    radial-gradient(circle at 92% 8%, rgba(169, 44, 255, 0.11), transparent 34%),
+    radial-gradient(circle at 6% 0%, rgba(18, 199, 232, 0.11), transparent 30%) !important;
+  box-shadow:
+    0 22px 70px rgba(7, 17, 31, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.92) !important;
+}
+
+.premium-ai-section .ai-command-visual {
+  padding: clamp(24px, 3vw, 38px) !important;
+}
+
+.premium-ai-section .ai-command-top,
+.premium-ai-section .ai-command-chat div,
+.premium-ai-section .ai-command-insights div {
+  border-color: rgba(40, 104, 255, 0.10) !important;
+  background: rgba(255, 255, 255, 0.70) !important;
+}
+
+.premium-ai-section .ai-command-top strong,
+.premium-ai-section .ai-command-chat p,
+.premium-ai-section .ai-command-insights strong,
+.premium-ai-section .ai-command-services h3,
+.premium-ai-section .ai-command-process strong {
+  color: #07111f !important;
+  letter-spacing: 0 !important;
+}
+
+.premium-ai-section .ai-command-chat small,
+.premium-ai-section .ai-command-insights span,
+.premium-ai-section .ai-command-services p,
+.premium-ai-section .ai-command-process p {
+  color: #5f6d82 !important;
+}
+
+.premium-ai-section .ai-command-services i,
+.premium-ai-section .ai-command-services .ai-service-inline-icon,
+.premium-ai-section .ai-command-process span {
+  border-radius: 18px !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #128cff 0%, #2868ff 36%, #7440ff 70%, #a92cff 100%) !important;
+  box-shadow: 0 18px 42px rgba(40, 104, 255, 0.24) !important;
+}
+
+@media (max-width: 991px) {
+  .ai-service-section {
+    padding: 84px 0 !important;
+  }
+
+  .ai-service-section .row {
+    min-height: 0 !important;
+    padding: 34px !important;
+  }
+
+  .ai-service-section .col-lg-8 {
+    padding-top: 36px !important;
+    padding-left: 0 !important;
+  }
+
+  .ai-service-visual {
+    position: relative !important;
+    top: auto !important;
+    width: min(100%, 560px) !important;
+  }
+
+  .premium-ai-section {
+    padding: 82px 0 !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .ai-service-section {
+    padding: 62px 0 !important;
+  }
+
+  .ai-service-section::before {
+    inset: 10px !important;
+    border-radius: 22px !important;
+  }
+
+  .ai-service-section .row {
+    padding: 24px !important;
+    border-radius: 22px !important;
+  }
+
+  .ai-service-section .row::before {
+    left: 24px !important;
+    right: 24px !important;
+  }
+
+  .ai-service-visual {
+    border-radius: 20px !important;
+    box-shadow:
+      0 18px 46px rgba(7, 17, 31, 0.14),
+      0 0 0 6px rgba(255, 255, 255, 0.62) !important;
+  }
+
+  .ai-main-title {
+    font-size: clamp(28px, 8vw, 34px) !important;
+  }
+
+  .ai-para {
+    font-size: 16px !important;
+    line-height: 1.68 !important;
+  }
+
+  .ai-premium-stack-list,
+  .ai_contidi .process-row {
+    padding: 10px !important;
+    border-radius: 20px !important;
+  }
+
+  .premium-ai-section {
+    padding: 62px 0 !important;
+  }
+
+  .premium-ai-section::before {
+    inset: 10px !important;
+    border-radius: 22px !important;
   }
 }
